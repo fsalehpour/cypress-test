@@ -70,6 +70,7 @@ export default function Inventory({ state, setState }: Props): JSX.Element {
           <div className="input-wrapper">
             <label>Total value of goods</label>
             <input
+              id="inventory"
               type="number"
               name="inventory"
               ref={register}
@@ -83,7 +84,7 @@ export default function Inventory({ state, setState }: Props): JSX.Element {
           <button type="button" onClick={goBack}>
             Go back
           </button>
-          <button type="submit">Next page</button>
+          <button id="inventory-next-page-btn" type="submit">Next page</button>
         </div>
       </form>
     </>

@@ -47,6 +47,7 @@ export default function Activity({ state, setState }: Props): JSX.Element {
               .map(({ id, title }) => (
                 <label className="checkbox" key={id}>
                   <input
+                    id={`activity-${id}`}
                     type="checkbox"
                     name="activities"
                     value={id}
@@ -61,7 +62,7 @@ export default function Activity({ state, setState }: Props): JSX.Element {
         {errors?.activities && (
           <div className="error-message">{errors?.activities?.message}</div>
         )}
-        <button type="submit">Next page</button>
+        <button id="next-page-button" type="submit">Next page</button>
       </div>
     </form>
   );
